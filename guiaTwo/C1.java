@@ -6,12 +6,12 @@ public class C1 {
 	
 		 for(int i = 0; i < m.length; ++i) {
 			 for (int j = 0; j < m[0].length; ++j) {
-				 if(m[i][j] != m[i][m[0].length] ) {//si me queda espacio a la derecha 
+				 if(j < m[0].length-1) {//si me queda espacio a la derecha 
 					 r[i][j + 1] = m[i][j];//guardo el elemento actual en el espacio de la derecha de la matriz rotada
-				 }else {//si no me queda espacio
-					 r[i + 1][j] = m[i][j];//bajo lo actual a la fila siguiente 
+				 }else if(i < m.length-1) {//si estoy en la ultima columna y la fila no es la ultima
+					 r[i + 1][0] = m[i][j];//bajo lo actual a la fila siguiente pero en la primera columna 
 				 }
-				 if(m[i][j] == m[m.length][m[0].length]) {//si estoy en el último elemento
+				 else{//si estoy en el último elemento
 					 r[0][0] = m[i][j];//lo guardo en la primera posición de la matriz rotada 
 				 }
 				 
