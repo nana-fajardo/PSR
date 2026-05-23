@@ -17,4 +17,16 @@ public class C4 {
 	
 		return t;
 	}
+
+	//hace lo mismo pero admite doubles
+	public static double[][] matrizTranspuesta(double[][] m) {
+	    double[][] t = new double[m[0].length][m.length];
+	    
+	    for (int i = 0; i < m.length; i++) {
+	        for (int j = 0; j < m[0].length; j++) {
+	            t[j][i] = m[i][j];  
+	        }
+	    }
+	    return t;
+	}
 }
