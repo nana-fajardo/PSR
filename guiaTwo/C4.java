@@ -6,7 +6,7 @@ public class C4 {
 		int [][] t = new int [m[0].length][m.length];//creo donde voy a contener la transpuestas con filas y columna invertidas
 		
 		if(m == null || m.length == 0) {
-			return -1;
+			return null;
 		}
 	
 		for(int i = 0; i < m.length; ++i) {
